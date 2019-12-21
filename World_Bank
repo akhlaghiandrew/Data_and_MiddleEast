@@ -1,0 +1,13 @@
+#!/bin/env python3
+import pandas as pd #importing brings in new libraries of commands 
+df_1=pd.read_csv(WOLRD_BANK_DATA.CSV)
+#get all column names
+list(df_1)
+#get all unique crimes 
+df_1[COLUMN_NAME].unique()
+#all rows for Iran, Turkey, and Tunisia
+list_countries= ['IRN','TUR','TUN']
+df_2 = df_1.loc[df_1['Country Name'].isin(list_countries)]
+df_3=df_2.loc[df_2['Series
+#save as a csv
+df_2.to_csv(FILENAME_YOU_WANT)
