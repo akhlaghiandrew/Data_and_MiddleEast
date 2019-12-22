@@ -1,5 +1,7 @@
 #!/bin/env python3
 import pandas as pd #importing brings in new libraries of commands 
+import matplotlib.pyplot as plt #import the ploting library
+import numpy as np
 df_1=pd.read_csv(WOLRD_BANK_DATA.CSV)
 #get all column names
 list(df_1)
@@ -7,7 +9,22 @@ list(df_1)
 df_1[COLUMN_NAME].unique()
 #all rows for Iran, Turkey, and Tunisia
 list_countries= ['IRN','TUR','TUN']
-df_2 = df_1.loc[df_1['Country Name'].isin(list_countries)]
-df_3=df_2.loc[df_2['Series
+df_2 = df_1.loc[df_1['Country Code'].isin(list_countries)]
+df_3=df_2.loc[df_2["Series Name"]=="Income share held by lowest 20%"]
+df_4=df_3.drop(['Country Name','Series Code', 'Series Name'], axis=1)
+df_5=df_4.set_index('Country Code')
+df_6=df_5.T
+
+df_5=df_4.T
+df.replace('..',0)
+df_5.plot(y='4598', use_index=True, kind='line')
+
+
+df_5=df_4.replace('..', np.nan).astype(float)
+df_6=df_5.interpolate()
+df_6.fillna(method='bfill')
+df_6.plot()
+plt.show()
+           
 #save as a csv
 df_2.to_csv(FILENAME_YOU_WANT)
