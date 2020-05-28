@@ -1,16 +1,17 @@
-#!/bin/env python3
+#you can enter these commands directly into the command line or into IDLE 
+
 import pandas as pd #importing brings in new libraries of commands 
-import matplotlib.pyplot as plt #import the ploting library
-import numpy as np
-df_1=pd.read_csv(WOLRD_BANK_DATA.CSV)
+import matplotlib.pyplot as plt #import the library that makes graphs 
+import numpy as np  
+df_1=pd.read_csv(WOLRD_BANK_DATA.CSV) #the file name will depend on you operating system and your working directory
 #get all column names
 list(df_1)
-#get all unique values 
+#get all unique values in a column 
 df_1[COLUMN_NAME].unique()
 #all rows for Iran, Turkey, and Tunisia
 list_countries= ['IRN','TUR','TUN']
 df_2 = df_1.loc[df_1['Country Code'].isin(list_countries)]
-#or
+#or to select value for one country 
 df_2 = df_1.loc[df_1['Country Code']=='AFG']
 
 df_3=df_2.loc[df_2["Series Name"]=="Income share held by lowest 20%"]
