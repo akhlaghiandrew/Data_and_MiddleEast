@@ -1,4 +1,4 @@
-#!/bin/usr python3
+#!/usr/bin/env python3
 #you can enter these commands directly into the command line or into IDLE 
 
 import pandas as pd #importing brings in new libraries of commands 
