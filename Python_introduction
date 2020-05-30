@@ -11,10 +11,22 @@ Get list of files and subdirectories in a directory
 >>> os.listdir()
 
 Example 3: 
-Chane working directory via relative path 
+Chane working directory via relative path #If the directory is in your working directory
 >>> os.chdir('Desktop')
 >>> os.getcwd()
 '/Users/andrewakhlaghi/Desktop'
 
 Example 4: 
-Change working directory via absolute path
+Change working directory via absolute path # if the directory is outside of your working directory 
+>>> os.chdir('/Users/andrewakhlaghi/Desktop/Programs')
+>>> os.getcwd()
+'/Users/andrewakhlaghi/Desktop/Programs'
+
+#If you want to move a files: 
+>>> import shutil 
+>>> shutil.move(SOURCE_FILE, DESTINATION_FILE) # you can also use the shutil.copy or os.rename commands
+
+[OS library](https://docs.python.org/3/library/os.html)
+
+
+
