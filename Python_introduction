@@ -1,0 +1,20 @@
+Make sure you are in the correct directory. You will not automatically start in your Desktop. You will have to `navigate` there.
+Think about it like clicking through directories and windows. 
+You can do this is Python using the `OS` library. 
+Example 1:
+Check working directory
+>>> os.getcwd()
+'/Users/andrewakhlaghi'
+
+Example 2:
+Get list of files and subdirectories in a directory 
+>>> os.listdir()
+
+Example 3: 
+Chane working directory via relative path 
+>>> os.chdir('Desktop')
+>>> os.getcwd()
+'/Users/andrewakhlaghi/Desktop'
+
+Example 4: 
+Change working directory via absolute path
