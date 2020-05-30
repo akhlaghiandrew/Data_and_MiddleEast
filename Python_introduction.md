@@ -26,7 +26,7 @@ Change working directory via absolute path # if the directory is outside of your
 >>> import shutil 
 >>> shutil.move(SOURCE_FILE, DESTINATION_FILE) # you can also use the shutil.copy or os.rename commands
 
-[OS library](https://docs.python.org/3/library/os.html)
+
 
 
 
